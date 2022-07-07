@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public static class DBmanager 
+{
+    public static string username;
+    // public static string userlogs;
+
+    public static bool loggedIn { get {return username != null;}}
+    public static void LogOut()
+    {
+        username = null;
+    }
+}

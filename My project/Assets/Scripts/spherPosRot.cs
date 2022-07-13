@@ -29,7 +29,7 @@ public class spherPosRot : MonoBehaviour
    }
    // setting values for current position and rotation
    public void Start(){
-     transform.position = new Vector3(sphereXposition,sphereYposition,sphereXposition);//positions of transform object
+     transform.position = new Vector3(sphereXposition,sphereYposition,sphereZposition);//positions of transform object
 
      transform.rotation = Quaternion.Euler(sphereXrotation,sphereYrotation,sphereZrotation);
    }

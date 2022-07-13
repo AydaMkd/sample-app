@@ -1,18 +1,17 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - DragItem
     - GotoMainScreen
     - Logout
     - MainPage
+    - ObjectSelect
     - Registration
-    - RotateObject
-    - Scale
     - SignIn
     - WriteDebugLogs
     - capsuleposandrot
     - cubePosRot
     - cylinderPosRot
+    - dragAndmoveItems
     - panObject
     - resizeObject
     - spherPosRot
@@ -107,8 +106,14 @@ ScriptsOnlyBuild:
     fullTypeName: SignIn
     methodName: VerifyInput
   - assembly: Assembly-CSharp
+    fullTypeName: ObjectSelect
+    methodName: ChoosePrevious
+  - assembly: Assembly-CSharp
     fullTypeName: Logout
     methodName: endsession
+  - assembly: Assembly-CSharp
+    fullTypeName: ObjectSelect
+    methodName: ChooseNext
   - assembly: Assembly-CSharp
     fullTypeName: GotoMainScreen
     methodName: mainScreen
@@ -147,7 +152,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3204}
     - Class: 114
-      Script: {instanceID: 5348}
+      Script: {instanceID: 5346}
     - Class: 114
       Script: {instanceID: 5630}
     - Class: 114
@@ -155,9 +160,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6126}
     - Class: 114
-      Script: {instanceID: 6478}
+      Script: {instanceID: 6476}
     - Class: 114
-      Script: {instanceID: 7880}
+      Script: {instanceID: 7874}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -195,8 +200,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -216,11 +219,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2668}
     - Class: 114
-      Script: {instanceID: 2714}
-    - Class: 114
       Script: {instanceID: 2898}
-    - Class: 114
-      Script: {instanceID: 3028}
     - Class: 114
       Script: {instanceID: 3204}
     - Class: 114
@@ -230,25 +229,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4556}
     - Class: 114
-      Script: {instanceID: 5086}
-    - Class: 114
-      Script: {instanceID: 5348}
-    - Class: 114
-      Script: {instanceID: 5802}
-    - Class: 114
-      Script: {instanceID: 5944}
+      Script: {instanceID: 5346}
     - Class: 114
       Script: {instanceID: 5972}
     - Class: 114
       Script: {instanceID: 6126}
     - Class: 114
-      Script: {instanceID: 6478}
-    - Class: 114
-      Script: {instanceID: 6834}
-    - Class: 114
-      Script: {instanceID: 7524}
-    - Class: 114
-      Script: {instanceID: 7594}
+      Script: {instanceID: 6476}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -305,7 +292,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3204}
     - Class: 114
-      Script: {instanceID: 5348}
+      Script: {instanceID: 5346}
     - Class: 114
       Script: {instanceID: 5630}
     - Class: 114
@@ -313,7 +300,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6126}
     - Class: 114
-      Script: {instanceID: 6478}
+      Script: {instanceID: 6476}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -349,8 +336,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -382,9 +367,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5066}
     - Class: 114
-      Script: {instanceID: 5086}
+      Script: {instanceID: 5346}
     - Class: 114
-      Script: {instanceID: 5348}
+      Script: {instanceID: 5464}
     - Class: 114
       Script: {instanceID: 5630}
     - Class: 114
@@ -396,15 +381,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6126}
     - Class: 114
-      Script: {instanceID: 6478}
+      Script: {instanceID: 6476}
     - Class: 114
-      Script: {instanceID: 6834}
+      Script: {instanceID: 6832}
     - Class: 114
-      Script: {instanceID: 7524}
+      Script: {instanceID: 8048}
     - Class: 114
-      Script: {instanceID: 7594}
-    - Class: 114
-      Script: {instanceID: 8304}
+      Script: {instanceID: 8300}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1022,12 +1005,6 @@ ScriptsOnlyBuild:
     className: UnityOnBeginDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9b8786b05c0b4c454bb7ea08298e13b2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RotateObject
-  - hash:
-      serializedVersion: 2
       Hash: 0cadf67970140b3a7997770202c43c70
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1086,6 +1063,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: d6f537d13760c5d76e7c6eec07257eff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectSelect
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1176,12 +1159,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
-  - hash:
-      serializedVersion: 2
-      Hash: c18550024867a452495134ac279cc8e4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Savepositionandrotation
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1370,22 +1347,10 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c3ebb08af6b24b5a3d6fe869f12f3f59
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Scale
-  - hash:
-      serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DragItem
   - hash:
       serializedVersion: 2
       Hash: 1acffdc47de1ca014dae3d384c3d1086
@@ -1460,6 +1425,12 @@ ScriptsOnlyBuild:
     className: TeleType
   - hash:
       serializedVersion: 2
+      Hash: 9b8786b05c0b4c454bb7ea08298e13b2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: dragAndmoveItems
+  - hash:
+      serializedVersion: 2
       Hash: b6e08e9716184d5736af5af9ffaf1513
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1512,4 +1483,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Register.unity
   - Assets/Scenes/Login.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/AydaMk/My project/mini-game.app
+  playerPath: /Users/AydaMk/Documents/Mini-Game/mini-game.app

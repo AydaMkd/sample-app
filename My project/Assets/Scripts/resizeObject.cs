@@ -11,18 +11,23 @@ public class resizeObject : MonoBehaviour
     {
         
     }
-     void OnMouseDown(){
-      if (Input.GetMouseButtonDown(0))
-      transform.localScale = transform.localScale + new Vector3(7f,7f,7f) * Time.deltaTime;  
-    
+     void Update(){
+        string objectName = gameObject.name;
+       if (Input.GetAxis("Mouse ScrollWheel") < 0) {
+      transform.localScale = transform.localScale + new Vector3(-7f,-7f,-7f) * Time.deltaTime; 
+      Debug.Log("player resized " + objectName);
+     } 
+      if (Input.GetAxis("Mouse ScrollWheel") > 0) {
+      transform.localScale = transform.localScale + new Vector3(7f,7f,7f) * Time.deltaTime;
+       Debug.Log("player resized " + objectName);  
  
 }
-    //  private void OnMouseUp() {
-      
-    // }
+    
 
    
 
 }     
        
-  
+}
+
+

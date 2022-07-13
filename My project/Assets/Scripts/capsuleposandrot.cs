@@ -42,6 +42,5 @@ public class capsuleposandrot : MonoBehaviour
     PlayerPrefs.SetFloat("capsuleRotationX", transform.eulerAngles.x);
     PlayerPrefs.SetFloat("capsuleRotationY", transform.eulerAngles.y);
     PlayerPrefs.SetFloat("capsuleRotationZ", transform.eulerAngles.z);
-     }
-
+   }
 }

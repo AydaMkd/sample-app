@@ -25,12 +25,13 @@ public class panObject : MonoBehaviour
   
         
      
-     if (Input.GetMouseButtonDown(1)){
+         if (Input.GetMouseButtonDown(2)){
        
          touchStart = GetWorldPosition(groundZ);
             
         }
-        if (Input.GetMouseButton(1)){
+     
+        if (Input.GetMouseButton(2)){
            
             Vector3 direction = touchStart - GetWorldPosition(groundZ);
             cam.transform.position += direction;

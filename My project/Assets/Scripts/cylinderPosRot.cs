@@ -30,7 +30,7 @@ public class cylinderPosRot : MonoBehaviour
    }
    // setting values for current position and rotation
    public void Start(){
-     transform.position = new Vector3(cylinderXposition,cylinderYposition,cylinderXposition);//positions of transform object
+     transform.position = new Vector3(cylinderXposition,cylinderYposition,cylinderZposition);//positions of transform object
 
      transform.rotation = Quaternion.Euler(cylinderXrotation,cylinderYrotation,cylinderZrotation);
    }

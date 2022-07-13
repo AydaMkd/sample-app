@@ -9,6 +9,7 @@ public class Logout : MonoBehaviour
        Debug.Log("Game saved") ;
        DBmanager.LogOut();
        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+       Debug.Log("player logged out");
     
     }
 }

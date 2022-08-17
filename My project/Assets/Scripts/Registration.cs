@@ -21,7 +21,7 @@ public class Registration : MonoBehaviour
         form.AddField("username", usernameField.text);
         form.AddField("password", passwordField.text);
         //  form.AddField("cpassword", cpasswordField.text);
-        WWW wwww = new WWW("https://first-page345.herokuapp.com/", form);
+        WWW wwww = new WWW("https://registerunity.herokuapp.com/", form);
         yield return wwww;
        
         if(wwww.text == "0")
